@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Document</title>
+    <!--引用第三方的样式-->
+    <link rel="stylesheet" href="cjq_coupon/lib/bootstrap/css/bootstrap.min.css">
+    <!--引用样式重置文件-->
+    <link rel="stylesheet/less" href="cjq_coupon/css/base.less">
+    <!--引用自己的样式文件-->
+    <link rel="stylesheet/less" href="cjq_coupon/css/index.less">
+    <!--引用less.js-->
+    <script src="cjq_coupon/lib/less/less.min.js"></script>
+</head>
+
+<body>
+<!--头部区域-->
+<header id="header">
+    <div class="back">
+        <a href="#" class="goback">
+            <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+        </a>
+    </div>
+    <h1>优惠券</h1>
+
+    <div class="apphome">
+        <a href="" class="app">
+            <img src="cjq_coupon/images/header_app.png" alt="">
+        </a>
+    </div>
+</header>
+
+<!--券图标部分-->
+<section id="yhq" class="clearfix">
+    <div class="container">
+        <div class="row">
+
+        </div>
+    </div>
+</section>
+
+<!--首页>优惠券-->
+
+<section id="syyhq">
+    <div class="qnav">
+        <a href="index.html">首页</a>
+        &nbsp;&gt;&nbsp;
+        <a href="quanindex.aspx">优惠券</a>
+    </div>
+
+</section>
+
+<!--优惠券底部-->
+<footer id="footer">
+    <div class="foot-top">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="#" style="width: 40%; border: 0;">
+            <img src="cjq_coupon/images/top.jpg" width="15" height="15"/>返回顶部
+        </a>
+    </div>
+    <div class="foot-bottom">
+        <p>
+            <a href="#" ; style="color: Red;">手机APP下载</a>
+            <a href="http://m.manmanbuy.com" style="color: black">慢慢买手机版</a>
+            -- 掌上比价平台
+        </p>
+
+        <p>
+            m.manmanbuy.com
+        </p>
+    </div>
+
+</footer>
+<div style="position:fixed;right:0;bottom:30px;z-index:999">
+    <a href="#">
+        <img src="cjq_coupon/images/appdownload.png" width="60">
+    </a>
+</div>
+
+</body>
+<script type="text/html" id="youhui">
+    {{each result as value i}}
+    <div class="col-xs-3">
+        <a href="cjq_coupon/couponproduct.html?couponid={{value.couponId}}">
+            <img src="{{#value.couponImg}}" alt=""/>
+            <br/>
+            {{value.couponTitle}}
+        </a>
+    </div>
+    {{/each}}
+</script>
+
+<!--引用jq-->
+<script src="cjq_coupon/lib/jquery/jquery.js"></script>
+<!--引用bootstrap.js-->
+<script src="cjq_coupon/lib/bootstrap/js/bootstrap.min.js"></script>
+<!--引用template.js-->
+<script src="cjq_coupon/lib/template/template.js"></script>
+<!--引用自己的js-->
+<script src="cjq_coupon/js/index.js"></script>
+
+</html>

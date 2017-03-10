@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>国内折扣</title>
+    <!--引用第三方的样式-->
+    <link rel="stylesheet" href="./ws_sale/lib/bootstrap/css/bootstrap.min.css">
+    <!--引用样式重置文件-->
+    <link rel="stylesheet/less" href="./ws_sale/css/base.less">
+    <!--引用自己的样式文件-->
+    <link rel="stylesheet/less" href="./ws_sale/css/gnzkreset.less"/>
+    <link rel="stylesheet/less" href="./ws_sale/css/gnzk.less">
+    <!--引用less.js-->
+    <script src="./ws_sale/lib/less/less.min.js"></script>
+</head>
+<body>
+<header id="header">
+    <h3>国内折扣</h3>
+    <a href="#" class="glyphicon glyphicon-menu-left arrow-back" id="back">
+    </a>
+    <a href="#" class="app">
+        <img src="./ws_sale/images/header_app.png" alt=""/>
+    </a>
+</header>
+<section id="section">
+    <div class="loading">
+        <!--<img  src="./ws_sale/images/5-130H2191322-52.gif" alt=""/>-->
+        <img  src="./ws_sale/images/01ba685651305a32f87512f636c134.gif" class="load1" alt=""/>
+        <!--<img  src="./ws_sale/images/5-121204194025.gif" alt=""/>-->
+    </div>
+    <div class="row">
+
+    </div>
+</section>
+
+<footer id="foot">
+    <ul class="clearfix">
+        <li><a href="javascript:;">登录</a></li>
+        <li><a href="javascript:;">注册</a></li>
+        <li><a href="#header"><span class="glyphicon glyphicon-arrow-up"></span>返回顶部</a></li>
+    </ul>
+    <div class="foot-info">
+        <a href="javascript:;">手机APP下载</a>
+        <span>慢慢买手机版-掌上比价平台</span>
+
+        <p>m.manmanbuy.com</p>
+    </div>
+</footer>
+</body>
+<script src="./ws_sale/lib/jquery/jquery.js"></script>
+<!--引用bootstrap.js-->
+<script src="./ws_sale/lib/bootstrap/js/bootstrap.min.js"></script>
+
+<!--引用template.js-->
+<script src="./ws_sale/lib/template/template.js"></script>
+<!--引用自己的js-->
+<script src="./ws_sale/js/gnzk.js"></script>
+<script type="text/template" id="gnzkTpl">
+    {{each result as value i }}
+    <div class="col-md-6 col-sm-6 col-xs-6 wrap">
+
+        <div class="img">
+            <!--<img src="./ws_sale/images/tp4_tp-y_b_sources_201702_14_58a305ee672e04167.jpg_d480.jp}g">-->
+            {{#value.productImg}}
+        </div>
+        <div class="title">{{value.productName}}</div>
+
+        <div class="price">{{value.productPrice}}</div>
+
+        <div class="time">
+            <sapn>{{value.productFrom}}丨</sapn>
+            <!--<span></span>-->
+            <span>{{value.productTime}}</span>
+        </div>
+        <!-- <a href="gnzkfy.html" id="next"></a>-->
+    </div>
+    {{/each }}
+</script>
+<script type="text/template" id="footTpl">
+    <div class="nav">
+        <a href="#">首页></a>
+        <a href="#">国内折扣</a>
+    </div>
+</script>
+<script>
+
+</script>
+</html>

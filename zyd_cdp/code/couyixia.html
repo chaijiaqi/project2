@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>凑单商品工具--慢慢卖比价网</title>
+    <!--引用第三方的样式-->
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css"/>
+    <!--引用重置样式文件-->
+    <link rel="stylesheet/less" href="./css/base.less"/>
+    <!--引用自己的样式-->
+    <link rel="stylesheet/less" href="./css/coudanpin.less"/>
+    <script src='./lib/less/less.min.js'></script>
+</head>
+<body>
+<!--heaad-bar-->
+<div class='head-bar'>
+    <div class='inner'>
+        <div class='left'>
+            <a href="../../index.html" class='icon-back'></a>
+        </div>
+        <div class='center'>
+            <h1>凑单品</h1>
+        </div>
+    </div>
+</div>
+<!--info-->
+<div class='coudan-box'>
+   <div class='form'>
+       <div class="list-title">距离免运费还差多少钱</div>
+       <div class="list-block border-top-img">
+           <ul>
+               <li class='border-bottom-img p'>
+                   <div class='media'><i class='icon-money'></i>输入差额</div>
+                   <div class='title'>
+                       <input type="number" placeholder="请输入金额" min='0' max="25" value="1" id='textMoney' />
+                       <a href="javascript:;" class="a-delput"></a>
+                   </div>
+               </li>
+           </ul>
+       </div>
+       <div class="list-title">商城和地区选择</div>
+       <div class="list-block border-top-img">
+           <ul>
+               <li class="border-bottom-img m">
+                   <div class='media'>
+                       <i class='icon-mall'></i>选择商城
+                   </div>
+                   <div class="title">
+                       <span>
+                           <select name="" id="siteInfo">
+                               <option value="1">京东商城</option>
+                           </select>
+                       </span>
+                   </div>
+               </li>
+               <li border-bottom-img s>
+                   <div class="media"> <i class='icon-position'></i>选择配送地区</div>
+                   <div class="title">
+                       <sapn>
+                           <select name="" id="areaInfo">
+                               <option value="1">华北</option>
+                               <option value="2">华东</option>
+                               <option value="3">华南</option>
+                               <option value="4">华中</option>
+                               <option value="5">西南</option>
+                               <option value="6">东北</option>
+                               <option value="7">西北</option>
+                           </select>
+                       </sapn>
+                   </div>
+               </li>
+           </ul>
+       </div>
+       <div class="b">
+           <a href="../../gsproduct.html" class="a-coubtn">凑一下</a>
+       </div>
+   </div>
+</div>
+</body>
+<!--引用jQuery-->
+<script src="./lib/jquery/jquery.js"></script>
+<!--引用bootstrap-->
+<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+<!--引用template.js-->
+<script src="./lib/template/template.js"></script>
+
+<!--引用自己的js-->
+<script src="./js/couyixia.js"></script>
+</html>

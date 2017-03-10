@@ -1,0 +1,117 @@
+#container {
+  background-color: #fff;
+}
+#container > .loading {
+  width: 100%;
+  transform: translateX(50%);
+}
+#container > .loading > .load1 {
+  transform: translateX(-50%);
+  height: auto;
+}
+#container #info {
+  padding: 10px 10px;
+}
+#container #info > .title {
+  font-size: 20px;
+  line-height: 30px;
+}
+#container #info > .price {
+  color: #ff841d;
+  line-height: 30px;
+  font-weight: 900;
+}
+#container #info > .time {
+  color: #989898;
+  font-size: 12px;
+  line-height: 30px;
+}
+#container #info > .introduce {
+  padding-top: 10px;
+}
+#container #info > .introduce > img {
+  width: 120px;
+  height: 120px;
+  float: left;
+  margin-right: 15px;
+}
+#container #info > .introduce > .word {
+  font-size: 16px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 26px;
+}
+#container #info > .goshop {
+  padding: 0 12px;
+  margin-top: 26px;
+}
+#container #info > .goshop > .toshop {
+  display: block;
+  background-color: #FF9000;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 5px;
+  color: #fff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+}
+#container #info > .erweima {
+  margin: 20px 0;
+}
+#container #info > .erweima > img {
+  width: 100%;
+  height: auto;
+}
+#container #comment {
+  padding: 0 10px;
+}
+#container #comment > .tit {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  padding: 6px 0;
+}
+#container #comment > .reply {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#container #comment > .reply > .form {
+  border: 2px solid #ECEAE8;
+  border-radius: 2px;
+  padding: 4px 0 0 4px;
+  background-color: #fff;
+  position: relative;
+  width: 98%;
+  margin: 0px auto;
+}
+#container #comment > .reply > .form > #ctl00_ContentBody_txt_nr {
+  width: 100%;
+  resize: none;
+  border: none;
+  line-height: 22px;
+  font-size: 14px;
+  outline: 0;
+  color: #000;
+  height: 68px;
+}
+#container #comment > .reply > .form > .ctrl {
+  background-color: #fbfbfb;
+  height: 36px;
+  border-top: 1px solid #f2f2f2;
+  position: relative;
+  margin-left: -4px;
+}
+#container #comment > .reply > .form > .ctrl > .tjdp {
+  border: 0;
+  height: 100%;
+  background: #ff841d;
+  color: #fff;
+  padding: 0 15px;
+  font-size: 16px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+#container #comment > .list > ul > li {
+  padding-left: 8px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  word-break: break-all;
+}

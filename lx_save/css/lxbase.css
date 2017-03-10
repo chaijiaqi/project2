@@ -1,0 +1,67 @@
+/*Í·²¿*/
+.head{
+    padding:0 30px;
+    height:44px;
+    background:#ff841d;
+    color:#fff;
+}
+.back{
+    margin-left: -20px;
+}
+.head h1{
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 44px;
+}
+.load {
+    display: inline-block;
+    width: 20px;
+    position: absolute;
+    top:10px ;
+    right: 20px;
+}
+/*µ×²¿*/
+.nav{
+    margin-top: 20px;
+    height: 36px;
+    background-image: linear-gradient(to bottom,#ffffff,#ebebeb);
+    border-top: solid 1px #ebebeb;
+    border-bottom: 1px solid #ccc;
+    line-height: 36px;
+    padding-left: 8px;
+}
+.foot{
+    margin-top: 30px;
+    background: #efefef;
+    text-align: center;
+}
+.foot a{
+    color: black;
+}
+.foot_t{
+    border-bottom: 1px solid #c4c4c4;
+    border-top: 1px solid #c4c4c4;
+}
+.foot_t a{
+    display: inline-block;
+    width: 30%;
+    line-height: 36px;
+}
+.foot_t a:nth-of-type(2){
+    border-left: 1px solid #c4c4c4;
+    border-right: 1px solid #c4c4c4;
+}
+.foot_b{
+    font-size: 12px;
+    padding: 15px 0;
+    color: #666;
+}
+.zip{
+    position: fixed;
+    bottom: 30px;
+    right: 10px;
+}

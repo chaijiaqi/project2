@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>白菜价</title>
+    <link rel="stylesheet/less" href="ltk_bs/css/base.less"/>
+    <link rel="stylesheet" href="ltk_bs/lib/bootstrap/css/bootstrap.min.css"/>
+    <!--[if lt IE 9]>
+    <script src="ltk_bs/lib/html5shiv/html5shiv.min.js"></script>
+    <script src="ltk_bs/lib/respond/respond.js"></script>
+    <![endif]-->
+    <link rel="stylesheet/less" href="ltk_bs/css/valiCheap.less"/>
+    <script src="ltk_bs/lib/less/less.min.js"></script>
+    <script></script>
+</head>
+<body>
+<div id="header">
+    <div class="back">
+        <a href="index.html">
+            <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+        </a>
+    </div>
+    <h3 class="title">
+        白菜价-淘宝内部券
+    </h3>
+    <div class="app">
+        <a href=""><img src="images/header_app.png" alt=""/></a>
+    </div>
+</div>
+<nav id="scrollNav">
+    <div class="scroll">
+        <ul>
+
+        </ul>
+    </div>
+    <div class="search">
+            <!--<span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>-->
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            <!--<span class=".icon-search"></span>-->
+    </div>
+</nav>
+<section id="movePage">
+    <img src="ltk_bs/images/heihei.png" style="width: 100%" alt=""/>
+</section>
+<img id="fig" src="ltk_bs/images/loadpic.jpg" alt="" style="width:100%;"/>
+<section class="content" id="content">
+
+</section>
+<footer class="foott container">
+    <ul class="row">
+        <li class="col-lg-4 col-sm-4 col-md-4 col-xs-4"><a href="">登录</a></li>
+        <li class="col-lg-4 col-sm-4 col-md-4 col-xs-4"><a href="">注册</a></li>
+        <li class="col-lg-4 col-sm-4 col-md-4 col-xs-4"><a href=""><span class="glyphicon glyphicon-arrow-up"></span>返回顶部</a></li>
+    </ul>
+    <div class="intro">
+        <span ><a href="javascript:;">手机APP下载</a></span>
+        <span><a href="javascript:;">慢慢买手机版</a></span>
+        <span><a href="javascript:;">-掌上比价平台</a></span>
+    </div>
+    <div class="webNet">
+        n.manmanbuy.com
+    </div>
+</footer>
+<img class="appp" src="ltk_bs/images/appp.png" alt=""/>
+
+
+<script src="ltk_bs/lib/jquery/jquery.js"></script>
+<script src="ltk_bs/js/valiCheap.js"></script>
+<script src="ltk_bs/js/swipe.js"></script>
+<script src="ltk_bs/js/common.js"></script>
+<script src="ltk_bs/lib/template/template.js"></script>
+<script type="text/template" id="tpl">
+    <div class="aaa" >
+    {{each result as value i}}
+
+        <div class="contentDiv" id="{{value.productid}}">
+            <!--<div class="productImg col-sm-2 col-xs-3">-->
+            <a class="productImg" href="javascript:;">{{#value.productImg}}</a>
+            <!--</div>-->
+
+            <div class="productMsg">
+                <div class="productName">
+                    {{#value.productName}}
+                </div>
+                <div class="productPrice">
+                    {{#value.productPrice}}
+                </div>
+                <div class="num clearfix">
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" style="">
+
+                        </div>
+                    </div>
+                    <div class="remainNum">
+                        {{#value.productCouponRemain}}
+                    </div>
+                </div>
+
+                <div class="productCupon">
+                    {{#value.productCoupon}}
+                </div>
+            </div>
+
+            <div id="downloadHref" class="">
+                {{#value.productHref}}
+            </div>
+        </div>
+    {{/each}}
+    </div>
+</script>
+<script type="text/template" id="listTpl">
+        {{each result as value i }}
+        <li><a href="javascript:;">{{value.title}}</a></li>
+        {{/each}}
+</script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0"/>
+	<title>MMB实战</title>
+	<!-- 引用第三方样式 -->
+	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
+	<!-- 引用样式重置文件 less格式-->
+	<link rel="stylesheet/less" type="text/css" href="../css/base.less">
+	<!-- 引用自己的样式文件 less格式 -->
+	<link rel="stylesheet/less" type="text/css" href="../css/index.less">
+	<!-- 引用less.js -->
+	<script src="../js/angular.js"></script>
+	<script src="../lib/less/less.min.js"></script>
+	<!-- -->
+	<script src="../js/jquery-1.12.2.js"></script>
+	<script src="../js/template.js"></script>
+	<style>
+		.page{
+			margin-top: 20px;
+		}
+		.page a{
+			border-bottom: 1px solid #bababa;
+			box-shadow: 0 0 1px #666;
+			border-radius: 5px;
+			text-align: center;
+			font-size: 14px;
+			line-height: 32px;
+			overflow: hidden;
+			padding: 6px 20px;
+			background: -webkit-gradient(linear,0 0,0 100%,from(#f1f1f1),to(#d4d4d4));
+		}
+		.page td{
+			text-align: center;
+		}
+	</style>
+<body>
+<!-- header -->
+<header id="mmb-header" class="">
+	<div id="header1">
+		<div class="logo fl">
+			<a href="../../index.html">
+				<img src="../images/header_logo.png" alt=""/>
+			</a>
+		</div>
+		<div class="appdown fr">
+			<a href="#">
+				<img src="../images/header_app.png" alt=""/>
+			</a>
+		</div>
+	</div>
+	<div id="header2" style="display:none;"></div>
+</header>
+<!-- 搜索框 -->
+<section id="mmb-form-search">
+	<form action="">
+		<div id="mmb-searchtxt">
+			<input type="search" name="key" placeholder="请输入你想比价的商品"/>
+		</div>
+		<div id="mmb-searchbtn">
+			<input type="submit" value="搜索"/>
+		</div>
+	</form>
+</section>
+<!---------------公共头部-->
+	<div class="product-title">
+		<ol class="breadcrumb">
+			<li><a href="../../index.html">首页</a></li>
+			<li><a href="../../category.html">分类大全</a></li>
+
+			<li id="listname"></li>
+		</ol>
+		<a class="btn btn-default" href="../../category.html">筛选</a>
+	</div>
+
+<!---------------尾部结束-->
+<!--内容开始-->
+<section>
+
+	<div id="listshow">
+		<!--<div class="media">
+    <a class="media-left" href="#">
+     <img src="http://pro.zuyushop.com:8015/ProPic/20166/Thumb/Thumb_2016060015515937123.png" alt="乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视" width="100" height="100">
+    </a>
+    <div class="media-body">
+        <a href="">
+            <h5>乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视</h5>
+            <p class="price">1999</p>
+            <em>报价(6)</em><em>评论(2286)</em>
+        </a>
+    </div>
+</div>-->
+	</div>
+	<!--<div>-->
+		<!--<input type="button" value="上一页" class="btn btn-default pull-left pre">-->
+		<!--<input type="button" value="下一页" class="btn btn-default pull-right nex">-->
+		<!--<div class="bgbox" ng-app="myApp" ng-controller="myCtrl">-->
+
+			<!--<select id="chosebox" ng-init="selectedName = names[0]" ng-model="selectedName" ng-options="x for x in names">-->
+			<!--</select>-->
+
+		<!--</div>-->
+
+	<!--</div>-->
+	<div id="display" class='page'>
+		<table width="100%">
+			<tr>
+				<td>
+					<a class="up" href="#">上一页</a>
+				</td>
+				<td>
+					<a href="" onclick="return false">当前页</a>
+					<select  id="selectPage" style="width:65px;height:33px">
+					</select>
+				<td>
+					<a class="down" href="#">下一页</a>
+				</td>
+			</tr>
+		</table>
+	</div>
+</section>
+<!--内容结束-->
+<!--底部开始-->
+
+<!--底部结束-->
+
+
+</body>
+<!---------------模块引擎start-->
+
+<script id="productListTpl" type="text/html">
+	{{each result as value i}}
+	<div class="media">
+		<a class="media-left" href="">
+			{{#value.productImg}}
+		</a>
+		<div class="media-body">
+			<a href="bijia.html?productId={{value.productId}}">
+				<h5>{{value.productName}}</h5>
+				<p class="price">{{value.productPrice}}</p>
+				<em>{{value.productQuote}}</em><em>{{value.productCom}}</em>
+			</a>
+		</div>
+	</div>
+	{{/each}}
+</script>
+<script id="productListTp2" type="text/html">
+
+	{{each result as value i}}
+	<span>{{value.category}}</span>
+	{{/each}}
+
+</script>
+
+<!---------------模块引擎end-->
+</html>
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<!-- 引用自己的 js -->
+<script src="../js/index2.js"></script>
+<!--JS调试区-->
+<script>
+	var obj = window.location.href
+	console.log(obj);
+	var a = /^.*id=(\d+).*&.*$/
+	var c = a.exec(obj);
+	var i=c[1]
+	console.log(c);
+	//console.log(c[1]);
+	var pageid=1;
+	var arr=0;
+	var num = 4;
+	for (var j = 1; j < num; j++) {
+		$('select').append('<option>' + j + "/3" + '</option>');
+	}
+	$('.down').on('click', function () {
+		if (pageid < 4) {
+			pageid++;
+			getData();
+		}
+		if (pageid == 4) {
+			alert('已经是最后一页');
+		}
+		$('select option:eq(' + ( pageid - 1 ) + ')').prop('selected', true);
+	})
+
+	if (pageid == 4) {
+		alert('已经是最后一页');
+	}
+	$('select option:eq(' + ( pageid - 1 ) + ')').prop('selected', true);
+	$('.up').on('click', function () {
+		if (1 < pageid) {
+			pageid--;
+			console.log(pageid);
+			getData();
+		} else {
+			alert('已经是第一页');
+		}
+		$('select option:eq(' + (pageid - 1) + ')').prop('selected', true);
+	})
+
+	$('#selectPage').on('change', function () {
+		console.log($(this));
+		pageid = $('select')[0].selectedIndex + 1;
+		getData();
+		//console.log($(this).find("option:selected").html());
+		window.scrollTo(0, 0);
+	});
+	$('select option:eq(' + (pageid - 1) + ')').prop('selected', true);
+	function getData() {
+		$.ajax({
+
+			url: "http://139.199.157.195:9090/api/getproductlist?categoryid=" + c[1] + "&pageid=" + pageid,
+			type: "get",
+			datetype: "json",
+			success: function (res2) {
+
+//				arr = Math.ceil(res2.totalCount / res2.pagesize)
+//				console.log(arr);
+				var html = template("productListTpl", res2);
+				$("#listshow").html(html);
+				$.ajax({
+					url: "http://139.199.157.195:9090/api/getcategorybyid?categoryid=" + c[1] + "",
+					type: "get",
+					datetype: "json",
+					success: function (res1) {
+						var html = template("productListTp2", res1);
+						$("#listname").html(html);
+//						var app = angular.module('myApp', []);
+//						app.controller('myCtrl', function ($scope) {
+//							$scope.names = ["Google", "Runoob", "Taobao"];
+//						});
+
+
+					}
+				})
+			}
+		})
+	}
+
+
+</script>

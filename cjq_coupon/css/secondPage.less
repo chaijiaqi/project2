@@ -1,0 +1,109 @@
+#container {
+  >.quan-box{
+    ul {
+      padding: 0;
+      list-style: none;
+      li > a {
+        display: inline-block;
+        text-decoration: none;
+        .pic {
+          width: 100px;
+          height: 80px;
+          overflow: hidden;
+          margin-right: 10px;
+          float: left;
+          img {
+            vertical-align: middle;
+            width: 100%;
+          }
+        }
+        .info {
+          padding-right: 30px;
+          overflow: hidden;
+          line-height: 24px;
+          .tit {
+            h3 {
+              margin: 0px;
+              padding: 0px;
+              text-align: justify;
+              font-size: 14px;
+              font-weight: normal;
+              color: #333333;
+              line-height: 20px;
+            }
+            h2 {
+              color: black;
+              padding: 5px 0;
+              font-size: 100%;
+              font-weight: bold;
+            }
+          }
+          .time {
+            font-size: 12px;
+            color: #EE7700;
+            margin-top: 10px;
+          }
+        }
+
+      }
+    }
+  }
+}
+.cover {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .8);
+  //z-index: 100;
+  display: none;
+  >.cover_slider{
+    width: 200px;
+    height: 160px;
+    //margin: 50% auto;
+    overflow: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -80px;
+    margin-left: -100px;
+    >ul{
+      width: 1000%;
+      height: 160px;
+      >li{
+        width: 10%;
+        height: 160px;
+        float: left;
+        >img{
+          width: 100%;
+          height: 160px;
+        }
+      }
+    }
+  }
+  >.arrow{
+
+    >.arrLeft,>.arrRight{
+      background: url("../images/arrows.png") no-repeat;
+      opacity: .5;
+      width: 43px;
+      height: 58px;
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      margin-top: -29px;
+      z-index: 10000;
+    }
+    >.arrLeft:hover,>.arrRight:hover{
+      opacity: 1;
+    }
+    >.arrLeft{
+      left: 40px;
+    }
+    >.arrRight{
+      right: 40px;
+      background-position: right center;
+    }
+  }
+}

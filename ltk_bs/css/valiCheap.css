@@ -1,0 +1,282 @@
+body {
+  background-color: #f2f2f2;
+  font-family: 'microsoft yahei';
+}
+html {
+  background-color: #f2f2f2;
+}
+#header {
+  background-color: #e4393c;
+  position: relative;
+  height: 44px;
+}
+#header > .back {
+  width: 50px;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+}
+#header > .back > a {
+  display: inline-block;
+  text-align: center;
+  height: 44px;
+  line-height: 44px;
+}
+#header > .back > a span {
+  margin-left: 15px;
+  color: white;
+  font-size: 20px;
+}
+#header > .title {
+  color: white;
+  margin-top: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-family: "����";
+  font-size: 20px;
+  font-weight: 900;
+  transform: translate(-50%, -50%);
+}
+#header > .app {
+  position: absolute;
+  width: 50px;
+  height: 44px;
+  top: 0;
+  right: 0;
+}
+#header > .app img {
+  height: 30px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-15px, -50%);
+}
+/*������*/
+.navbar {
+  min-height: 38px;
+  margin-bottom: 0;
+}
+#scrollNav {
+  z-index: 1;
+  position: relative;
+  height: 38px;
+  background-color: white;
+  border-bottom: 1px solid #ccc;
+}
+#scrollNav > .scroll {
+  height: 38px;
+  width: 100%;
+  overflow: hidden;
+}
+#scrollNav > .scroll > ul {
+  min-width: 754px;
+  list-style: none;
+  height: 38px;
+  margin-bottom: 0;
+  font-size: 16px;
+}
+#scrollNav > .scroll > ul > li {
+  padding: 0 10px;
+  float: left;
+  height: 38px;
+  line-height: 38px;
+  margin-top: 0;
+  border-bottom: none;
+}
+#scrollNav > .scroll > ul > li > a {
+  text-decoration: none;
+  display: inline-block;
+  color: #222222;
+  height: 100%;
+}
+#scrollNav > .scroll > ul > li.red {
+  border-bottom: 3px solid red;
+  margin-top: -1px;
+}
+#scrollNav > .search {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 38px;
+  height: 37px;
+  background-color: #e6e6e6;
+  text-align: center;
+  line-height: 37px;
+  border-left: 1px solid #CCC;
+}
+#scrollNav > .search > span {
+  display: inline-block;
+  font-size: 20px;
+  height: 36px;
+  line-height: 36px;
+  font-weight: 200;
+  color: #a3a3a3;
+}
+/*�ֲ�ͼ*/
+#movePage {
+  margin-top: 10px;
+}
+#movePage img {
+  width: 100%;
+}
+/*����*/
+.content {
+  max-width: 992px;
+  margin: 0 auto;
+}
+.content .contentDiv {
+  position: relative;
+  margin-top: 10px;
+  border-top: 1px solid #f2f2f2;
+  border-bottom: 1px solid #f2f2f2;
+  height: 150px;
+  width: 100%;
+  background-color: white;
+}
+.content .contentDiv .productImg {
+  margin-top: 10px;
+  margin-left: 10px;
+  float: left;
+}
+.content .contentDiv .productImg img {
+  width: 135px;
+  height: 130px;
+}
+.content .contentDiv .productMsg {
+  padding-left: 145px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.content .contentDiv .productMsg > .productName {
+  font-size: 14px;
+}
+.content .contentDiv .productMsg > .productPrice {
+  margin-top: 5px;
+  font-size: 18px;
+  color: red;
+}
+.content .contentDiv .productMsg > .productPrice i {
+  font-size: 14px;
+  margin-right: 5px;
+}
+.content .contentDiv .productMsg > .productPrice em {
+  font-size: 14px;
+}
+.content .contentDiv .productMsg > .productPrice del {
+  font-size: 14px;
+  color: black;
+  margin-left: 5px;
+}
+.content .contentDiv .productMsg > .num {
+  margin-top: 10px;
+  height: 25px;
+}
+.content .contentDiv .productMsg > .num > .progress {
+  float: left;
+  border: 1px solid #ff5e5d;
+  background: pink;
+  width: 80px;
+  margin-bottom: 5px;
+  margin: 0 auto;
+}
+.content .contentDiv .productMsg > .num > .progress > .progress-bar {
+  background-color: #ff5e5d;
+  text-align: center;
+}
+.content .contentDiv .productMsg > .num > .remainNum {
+  margin-left: 5px;
+  color: #ff5e5d;
+  float: left;
+}
+.content .contentDiv .productMsg > .num > .remainNum b {
+  font-weight: 400;
+}
+.content .contentDiv .productMsg > .productCupon {
+  margin-top: 5px;
+  width: 120px;
+  height: 24px;
+  line-height: 24px;
+  border: 1px dotted red;
+  text-align: center;
+}
+.content .contentDiv .productMsg > .productCupon a {
+  text-decoration: none;
+  color: red;
+  font-size: 12px;
+  text-align: center;
+}
+.content .contentDiv > #downloadHref {
+  position: absolute;
+  right: 10px;
+  bottom: 20px;
+  height: 38px;
+  width: 76px;
+  border-radius: 5px;
+  background-color: #ff5e5d;
+  text-align: center;
+  line-height: 38px;
+}
+.content .contentDiv > #downloadHref a {
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+}
+.foott {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 20px;
+  width: 100%;
+  background-color: #efefef;
+}
+.foott > ul {
+  padding: 0;
+  list-style: none;
+}
+.foott > ul > li {
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  border: 1px solid #e4e4e4;
+  list-style: none;
+}
+.foott > ul > li > a {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  height: 40px;
+  width: 100%;
+}
+.foott > .intro {
+  margin: 0 auto;
+  margin-top: 10px;
+  width: 250px;
+  text-align: center;
+  font-size: 8px;
+}
+.foott > .intro > span:nth-child(1) a {
+  color: red;
+}
+.foott > .intro > span:nth-child(2) a {
+  color: black;
+}
+.foott > .intro > span:nth-child(3) a {
+  color: #999;
+}
+.foott > .intro a {
+  text-decoration: none;
+}
+.foott .webNet {
+  height: 100%;
+  width: 100px;
+  margin: 0 auto;
+  font-size: 8px;
+}
+.appp {
+  position: fixed;
+  right: 5px;
+  bottom: 30px;
+  width: 67px;
+  height: 67px;
+}

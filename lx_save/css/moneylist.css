@@ -1,0 +1,120 @@
+body,html {
+    width: 100%;
+}
+.big .container{
+   max-width: 940px;
+}
+.title{
+    min-height: 50px;
+}
+.con>img{
+    display: inline-block;
+    width: 120px;
+    float: right;
+}
+.con p>img{
+    display: inline-block;
+    width: 355px;
+}
+.locallist{
+    text-align: center;
+}
+#disstorck{
+    display: inline-block;
+    width: 90px;
+    border: 2px solid #e0e0e0;
+    border-top:none;
+}
+#disstorck li{
+    padding: 0px;
+    width: 80px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    text-align: center;
+    border-bottom: 1px dashed #e0e0e0;
+}
+li strong{
+    color:#ff6c00;
+}
+#disstorck li span{
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+}
+
+/* 去购物���*/
+.car{
+    background: #ff6c00;
+    height: 25px;
+   text-align: center;
+    line-height: 25px;
+}
+.car a{
+    color: white;
+}
+/*�评论��*/
+.cu-content-pl .tit{
+    margin-top: 15px;
+}
+.reply .form{
+    width: 100%;
+}
+.reply .form #ctl00_ContentBody_txt_nr {
+    width: 100%;
+}
+.tjdp{
+    float: right;
+}
+#newcomment{
+    margin-top: 30px;
+}
+
+.userimg img{
+    width: 40px;
+    border-radius: 20px;
+    height: 40px;
+    float: left;
+}
+.username{
+    margin-left: 50px;
+    color: #5997c0;
+    font-size: 13px !important;
+}
+.time{
+    color: #999999;
+    font-size: 13px !important;
+    float: right;
+}
+.content{
+    margin-left: 50px;
+}
+.zip {
+    z-index: 666;
+}
+.foot-bb{
+    width: 100%;
+   position: fixed;
+    bottom: 0;
+    right: 0;
+    height: 45px;
+    border-bottom: 1px solid #8c8c8c;
+}
+.foot-bb .comment{
+    float: left;
+    width: 35%;
+    text-align: center;
+    background: white;
+    font-size:20px ;
+}
+.foot-bb .car{
+    height: 45px;
+    float: left;
+    width: 65%;
+    line-height: 45px;
+    background:#ff6c00 ;
+    font-size: 20px;
+}
+.foot-bb .car a:nth-of-type(2){
+    
+}

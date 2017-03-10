@@ -1,0 +1,232 @@
+@charset "utf-8";
+
+.mmb-cc {
+    //通用栏
+    height: 35px;
+    background-color: #ff9000;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffaf47), to(#ff9000));
+    background: -moz-linear-gradient(top, #ffaf47, #ff9000);
+    background: -o-linear-gradient(top, #ffaf47, #ff9000);
+    border-bottom: solid 1px #ffc881;
+    line-height: 35px;
+    color: #fff;
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    img {
+        float: right;
+        margin-right: 10px;
+        color: #fff;
+        margin-top: 8px;
+    }
+}
+
+.loading {
+    width: 100%;
+    transform: translateX(50%);
+    img {
+        transform: translateX(-50%);
+        height: auto;
+    }
+}
+
+body {
+    background: #f7f7f7;
+}
+
+/* ~~~ --- footer B --- ~~~ */
+footer {
+    background: #fff;
+    margin-top: 10px;
+    .row {
+        div {
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border: 1px solid #ccc;
+            a{
+                width: 100%;
+                height: 100%;
+                display: block;
+            }
+        }
+    }
+    p {
+        margin: 10px;
+        text-align: center;
+        font-size: 12px;
+        a{
+            color: #000;
+        }
+        a:first-child {
+            color: red;
+        }
+    }
+}
+
+/* ~~~ --- 新人礼包遮罩层 B --- ~~~ */
+#mmb-gift {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, .6);
+    position: fixed;
+    z-index: 9999;
+    display: block;
+    .gift {
+        width: 75%;
+        max-width: 400px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        a {
+            img {
+                width: 100%;
+                max-height: 500px;
+            }
+        }
+        i {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 32px;
+            height: 32px;
+            background: url(../../images/close.png) no-repeat;
+            cursor: pointer;
+        }
+    }
+}
+#mmb-smallgift{
+    position: fixed;
+    right: 5px;
+    bottom: 10px;
+    z-index: 9999;
+    img{
+        width: 40px;
+    }
+}
+/* ~~~ --- 菜单栏menu B --- ~~~ */
+#mmb-menu {
+    min-height: 188px;
+    padding: 6px 0;
+    background: white;
+    .row {
+        div {
+            a {
+                margin-top: 10px;
+                display: block;
+                text-align: center;
+                text-decoration: none;
+                img {
+                    width: 50px;
+                    height: 50px;
+                }
+                p {
+                    margin: 0 0 10px;
+                }
+            }
+        }
+    }
+}
+
+/* ~~~ --- 推荐栏 recommen B --- ~~~ */
+#mmb-recomment {
+    a {
+        div {
+            margin-top: 4px;
+        }
+    }
+}
+
+/* ~~~ --- 折扣 mmb-discount B --- ~~~ */
+#mmb-discount {
+    padding-bottom: 10px;
+    .dis-list {
+        min-height: 128px;
+        max-width: 960px;
+        background: white;
+        font-size: 14px;
+        margin: 0 auto;
+        ul {
+            li {
+                padding: 14px 8px;
+                position: relative;
+                a {
+                    display: block;
+                    .dis-pic {
+                        width: 110px;
+                        img {
+                            width: 100px;
+                            height: 100px;
+                        }
+                    }
+                    .dis-info {
+                        .dis-title {
+                            color: #333;
+                            min-height: 57px;
+                            line-height: 19px;
+                            font-size: 15px;
+                            word-break: break-all;
+                            span {
+                                color: #ff6c00;
+                                display: inline;
+                            }
+                        }
+                        .dis-other {
+                            margin-top: 8px;
+                            color: #a1a1a1;
+                            font-size: 12px;
+                            .dis-comment {
+                                .icon-comment {
+                                    background-image: url(../../images/comment.png);
+                                    width: 13px;
+                                    height: 11px;
+                                    display: inline-block;
+                                    -webkit-background-size: auto 100%;
+                                    background-size: auto 100%;
+                                    background-repeat: no-repeat;
+                                    background-position: center;
+                                    vertical-align: middle;
+                                    margin-right: 3px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+    .dis-more {
+        text-align: center;
+
+        a {
+            line-height: 30px;
+            background: #f4f4f4;
+            font-size: 13px;
+            margin: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+
+            display: block;
+
+            background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f4f4f4), to(#ececec));
+            background-image: -moz-linear-gradient(#ffffff, #f4f4f4);
+            background-image: -ms-linear-gradient(#ffffff, #f4f4f4);
+            background-image: -o-linear-gradient(#ffffff, #f4f4f4);
+            background-image: linear-gradient(#ffffff, #f4f4f4);
+            -moz-background-clip: padding;
+        }
+    }
+}
+
+/* ~~~ --- 排行 mmb-brandRanking B --- ~~~ */
+#mmb-brandRanking {
+    a {
+        div {
+            margin-top: 10px;
+            margin-bottom: 6px;
+        }
+    }
+}

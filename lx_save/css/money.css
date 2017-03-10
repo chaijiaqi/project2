@@ -1,0 +1,137 @@
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+html {
+}
+body{
+    background: white;
+}
+/*heard����*/
+.head{
+    padding:0 30px;
+    height:44px;
+    background:#ff841d;
+    color:#fff;
+}
+.back{
+    margin-left: -20px;
+}
+.head h1{
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 44px;
+}
+.load {
+    display: inline-block;
+    width: 20px;
+    position: absolute;
+    top:10px ;
+    right: 20px;
+}
+/*���ݲ���*/
+.container{
+    margin: 0 auto;
+    max-width:960px;
+}
+.container li{
+    padding:12px 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.container .lx_list a{
+    display:block;
+}
+.container .pic{
+    width: 110px;
+}
+.container .pic img{
+    display:inline-block;
+    width: 100px;
+    height: 100px;
+}
+.info{
+    padding-left: 110px;
+}
+ .title{
+    min-height: 80px;
+}
+ .title span{
+    display: inline-block;
+    color:#ff6c00 ;
+}
+.date{
+    color:#a1a1a1 ;
+    font-size: 14px;
+}
+.date span:nth-of-type(2) i{
+    display: inline-block;
+    width: 18px;
+    height: 15px;
+    margin-right: 4px;
+    margin-bottom: -4px;
+    background: url("../images/pingl.jpg");
+}
+/*ҳ��*/
+.page{
+    margin-top: 20px;
+}
+.page a{
+    border-bottom: 1px solid #bababa;
+    box-shadow: 0 0 1px #666;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 32px;
+    overflow: hidden;
+    padding: 6px 20px;
+    background: -webkit-gradient(linear,0 0,0 100%,from(#f1f1f1),to(#d4d4d4));
+}
+.page td{
+    text-align: center;
+}
+.nav{
+    margin-top: 20px;
+    height: 36px;
+    background-image: linear-gradient(to bottom,#ffffff,#ebebeb);
+    border-top: solid 1px #ebebeb;
+    border-bottom: 1px solid #ccc;
+    line-height: 36px;
+    padding-left: 8px;
+}
+.foot{
+    margin-top: 30px;
+    background: #efefef;
+    text-align: center;
+}
+.foot a{
+    color: black;
+}
+.foot_t{
+    border-bottom: 1px solid #c4c4c4;
+    border-top: 1px solid #c4c4c4;
+}
+.foot_t a{
+    display: inline-block;
+    width: 30%;
+    line-height: 36px;
+}
+.foot_t a:nth-of-type(2){
+    border-left: 1px solid #c4c4c4;
+    border-right: 1px solid #c4c4c4;
+}
+.foot_b{
+    font-size: 12px;
+    padding: 15px 0;
+    color: #666;
+}
+.zip{
+    position: fixed;
+    bottom: 30px;
+    right: 10px;
+}

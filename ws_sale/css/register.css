@@ -1,0 +1,62 @@
+#header > .mmm {
+  position: absolute;
+  left: 15px;
+  top: 13px;
+}
+#header > .mmm img {
+  height: 25px;
+  width: auto;
+}
+.two {
+  padding: 0 10px;
+  font-size: 16px;
+}
+.two #search {
+  margin: 10px 0;
+  position: relative;
+  height: 30px;
+}
+.two #search .searcon {
+  height: 30px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-indent: 2em;
+  border-radius: 15px;
+  width: 100%;
+  border: none;
+  background-color: #ebebeb;
+}
+.two #search .searbut {
+  position: absolute;
+  right: 0px;
+  top: 0;
+  border: none;
+  background-color: #ff841d;
+  width: 66px;
+  height: 30px;
+  color: #fff;
+  border-radius: 15px;
+}
+#section #regist {
+  padding: 10px 40px;
+}
+#section #regist input {
+  height: 40px;
+  margin-bottom: 10px;
+  width: 100%;
+  text-indent: 1em;
+  border: 1px solid #ccc;
+}
+#section #regist > .tel {
+  width: 190px;
+}
+#section #regist > .gettel {
+  width: 40%;
+  text-indent: 0;
+  text-align: center;
+  background-color: #ebebeb;
+  border: none;
+  cursor: pointer;
+  min-width: 131px;
+}

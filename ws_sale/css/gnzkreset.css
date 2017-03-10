@@ -1,0 +1,95 @@
+body {
+  background-color: #fff;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+.row,
+input {
+  margin: 0;
+  padding: 0;
+}
+input {
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+#header {
+  height: 50px;
+  background-color: #ff841d;
+  color: #fff;
+  position: relative;
+}
+#header > .arrow-back {
+  position: absolute;
+  left: 13px;
+  top: 13px;
+  color: #fff;
+  font-size: 24px;
+}
+#header > .app {
+  position: absolute;
+  right: 13px;
+  top: 10px;
+}
+#header > .app > img {
+  width: 30px;
+  height: 30px;
+}
+#header > h3 {
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+}
+.nav {
+  height: 36px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 36px;
+  padding-left: 8px;
+  background-color: #ebebeb;
+  background: -webkit-linear-gradient(top, #fff, #ebebeb);
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ccc;
+}
+#foot {
+  margin: 20px 0 10px 0;
+  background-color: #ebebeb;
+}
+#foot > ul {
+  width: 100%;
+  border-top: 1px solid #c0c0c0;
+  border-bottom: 1px solid #c0c0c0;
+}
+#foot > ul > li:nth-of-type(2) {
+  border-left: 1px solid #c0c0c0;
+  border-right: 1px solid #c0c0c0;
+}
+#foot > ul > li {
+  float: left;
+  width: 33.33%;
+}
+#foot > ul > li > a {
+  display: block;
+  text-align: center;
+  line-height: 40px;
+  width: 100%;
+  cursor: pointer;
+  color: #6a6a6a;
+}
+#foot > ul > li > a > span {
+  font-size: 16px;
+}
+#foot > .foot-info {
+  font-size: 12px;
+  text-align: center;
+}
+#foot > .foot-info > a {
+  color: #ff0619;
+}

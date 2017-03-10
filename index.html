@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0"/>
+    <title>MMB实战</title>
+    <!-- 引用第三方样式 -->
+    <link rel="stylesheet" type="text/css" href="./lib/bootstrap/css/bootstrap.min.css">
+    <!-- 引用样式重置文件 less格式-->
+    <link rel="stylesheet/less" type="text/css" href="./cg_index/css/base.less">
+    <!-- 引用自己的样式文件 less格式 -->
+    <link rel="stylesheet/less" type="text/css" href="./cg_index/css/index.less">
+    <!-- 引用less.js -->
+    <script src="./lib/less/less.min.js"></script>
+</head>
+<body>
+<!--这是遮罩层-->
+<section id="mmb-gift">
+    <div class="gift">
+        <a href="#">
+            <img src="./images/gift.png" alt=""/>
+        </a>
+        <i class="close"></i>
+    </div>
+</section>
+<section id="mmb-smallgift">
+    <img src="./images/gift.png" alt=""/>
+</section>
+<!-- header -->
+<header id="mmb-header" class="">
+    <div id="header1">
+        <div class="logo fl">
+            <a href="index.html">
+                <img src="./images/header_logo.png" alt=""/>
+            </a>
+        </div>
+        <div class="appdown fr">
+            <a href="#">
+                <img src="./images/header_app.png" alt=""/>
+            </a>
+        </div>
+    </div>
+    <div id="header2" style="display:none;"></div>
+</header>
+<!-- 搜索框 -->
+<section id="mmb-form-search">
+    <form action="">
+        <div id="mmb-searchtxt">
+            <input type="search" name="key" placeholder="请输入你想比价的商品"/>
+        </div>
+        <div id="mmb-searchbtn">
+            <input type="submit" value="搜索"/>
+        </div>
+    </form>
+</section>
+<!-- 菜单栏menu -->
+<section id="mmb-menu">
+    <div class="loading">
+        <img src="./images/loading.gif" alt="">
+    </div>
+</section>
+<!-- 推荐栏 recommen -->
+<section id="mmb-recomment">
+    <a href="#"> <!--//-->
+        <div class="mmb-cc">
+            <span>超值折扣推荐</span>
+            <img src="./images/more.png" width="20" height="20" alt=""/>
+        </div>
+    </a>
+</section>
+<!-- 折扣 discount -->
+<section id="mmb-discount" class="clearfix">
+    <form action="#">
+        <div class="mmb-wait"></div>
+        <div id="dis-list" class="dis-list clearfix">
+            <div class="loading">
+                <img src="./images/loading.gif" alt="">
+            </div>
+        </div>
+        <div class="dis-more">
+            <a href="moneyctrl.html">更多优惠信息 »</a><!--跳转到省钱控页面-->
+        </div>
+    </form>
+</section>
+<!-- 品牌排行 top10 -->
+<section id="mmb-top10">
+    <a href="#">
+        <div class="mmb-cc">
+            <span>品牌排行</span>
+            <img src="./images/more.png" width="20" height="20" alt=""/>
+        </div>
+    </a>
+</section>
+<footer id="footer">
+    <div class="row">
+        <div class="col-xs-4">
+            <a href="./ws_sale/login.html">登录</a>
+        </div>
+        <div class="col-xs-4">
+            <a href="./ws_sale/register.html">注册</a>
+        </div>
+        <div class="col-xs-4">
+            <a href="#mmb-header" id="toTop">↑返回顶部</a>
+        </div>
+    </div>
+    <p><a href="#">手机app下载 </a><a href="#">慢慢买手机版 </a> -- 掌上比价平台</p>
+    <p>m.manmanbuy.com </p>
+</footer>
+<!--菜单列表模版-->
+<script id="mmbMenu" type="text/html">
+    <div class="row">
+        {{each result as value i}}
+        <div class="col-xs-3 {{if i>7 }}hidden{{/if}}">
+            <a href={{value.titlehref}}>
+                {{#value.img}}
+                <p>{{value.name}}</p>
+            </a>
+        </div>
+        {{/each}}
+    </div>
+</script>
+<!--折扣列表模版-->
+<script id="listDiscount" type="text/html">
+    <ul>
+        {{each result as value i}}
+        <li class="clearfix">
+            <a href="./lx_save/moneylist.html#{{value.productId}}">
+                <div class="dis-pic fl">{{#value.productImgSm}}</div>
+                <div class="dis-info">
+                    <div class="dis-title">
+                        {{#value.productName}}
+                        <span>{{value.productPinkage}}</span>
+                    </div>
+                    <div class="dis-other">
+                        <span class="dis-mall fl">{{value.productFrom}} | {{value.productTime}}</span>
+                        <span class="dis-comment fr">
+                            <i class="icon-comment"></i>
+                            {{value.productComCount.replace("有","").replace("人评论","")}}
+                        </span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+    </ul>
+</script>
+</body>
+<!-- 引用JQ -->
+<script src="./lib/jquery/jquery.js"></script>
+<!-- 引用bootstrap.js -->
+<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+<!-- 引用自己的 js -->
+<script src="./lib/template/template.js"></script>
+<script src="./cg_index/js/index.js"></script>
+</html>

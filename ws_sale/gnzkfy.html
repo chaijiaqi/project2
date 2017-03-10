@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>国内折扣fenye</title>
+    <!--引用第三方的样式-->
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <!--引用样式重置文件-->
+    <link rel="stylesheet/less" href="./css/base.less">
+    <!--引用自己的样式文件-->
+    <link rel="stylesheet/less" href="./css/gnzkreset.less"/>
+    <link rel="stylesheet/less" href="./css/gnzkfy.less">
+    <!--引用less.js-->
+    <script src="./lib/less/less.min.js"></script>
+</head>
+<body>
+<header id="header">
+    <h3>国内折扣分页</h3>
+    <a href="#" class="glyphicon glyphicon-menu-left arrow-back" id="back">
+    </a>
+    <a href="#" class="app">
+        <img src="./images/header_app.png" alt=""/>
+    </a>
+</header>
+<!--内容开始-->
+<section id="container">
+    <div class="loading">
+        <!--<img  src="./images/5-130H2191322-52.gif" alt=""/>-->
+        <img  src="./images/01ba685651305a32f87512f636c134.gif" class="load1" alt=""/>
+        <!--<img  src="./images/5-121204194025.gif" alt=""/>-->
+    </div>
+    <!--详情start-->
+
+    <!--详情end-->
+
+</section>
+<!--内容结束-->
+
+<footer id="foot">
+    <ul class="clearfix">
+        <li><a href="login.html">登录</a></li>
+        <li><a href="register.html">注册</a></li>
+        <li><a href="#header"><span class="glyphicon glyphicon-arrow-up"></span>返回顶部</a></li>
+    </ul>
+    <div class="foot-info">
+        <a href="javascript:;">手机APP下载</a>
+        <span>慢慢买手机版-掌上比价平台</span>
+
+        <p>m.manmanbuy.com</p>
+    </div>
+</footer>
+</body>
+<script src="./lib/jquery/jquery.js"></script>
+<!--引用bootstrap.js-->
+<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/template" id="gnzkfyTpl">
+    {{each result as value i }}
+    <div id="info">
+        <h3 class="title">{{value.productName}}</h3>
+
+        <p class="price">{{value.productPrice}}</p>
+
+        <div class="time">
+            <span>{{value.productFrom}}</span>
+            <span>{{value.productTime}}</span>
+            <span>{{value.productTips}}</span>
+        </div>
+        <div class="introduce clearfix">
+            {{#value.productImg}}
+            <div class="word">
+               {{value.productInfo}}
+
+            </div>
+        </div>
+
+        <div class="goshop">
+            <a href="#" class="toshop">前往购买</a>
+        </div>
+        <div class="erweima">
+            <img src="./images/mmbweixin2.png" alt=""/>
+        </div>
+    </div>
+    <div id="comment">
+        {{#value.productComment}}
+    </div>
+    <div class="nav">
+        <a href="#">首页></a>
+        <a href="gnzk.html">国内折扣></a>
+        <a href="#">国内折扣分页</a>
+    </div>
+    {{/each}}
+</script>
+<!--引用template.js-->
+<script src="./lib/template/template.js"></script>
+<!--引用自己的js-->
+<script src="./js/gnzkfy.js"></script>
+</html>

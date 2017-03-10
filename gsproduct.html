@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>凑单品--慢慢卖比价网</title>
+    <!-- 引用第三方的样式 -->
+    <link rel="stylesheet" href="./zyd_cdp/code/lib/bootstrap/css/bootstrap.min.css"/>
+    <!-- 引用样式重置文件 -->
+    <link rel="stylesheet/less" href="./zyd_cdp/code/css/base.less"/>
+    <!-- 引用自己的样式 -->
+    <link rel="stylesheet/less" href="./zyd_cdp/code/css/coudanpin.less"/>
+    <script src='./zyd_cdp/code/lib/less/less.min.js'></script>
+</head>
+<body>
+<!-- head-bar -->
+<div class='head-bar'>
+    <div class='inner'>
+        <div class='left'>
+            <a href="zyd_cdp/code/couyixia.html" class='icon-back'></a>
+        </div>
+        <div class='center'>
+            <h1>凑单品</h1>
+        </div>
+    </div>
+</div>
+<div class='coudan-box'>
+    <div class="list">
+        <div class='hd'>
+            <div class="filter">
+                <ul>
+                    <li><a href="javascript:;">京东<i></i></a></li>
+                    <li><a href="javascript:;">华北<i></i></a></li>
+                    <li><a href="javascript:;">全部价格<i></i></a></li>
+                </ul>
+
+            </div>
+            <div class="search">
+                <i class='icon-search'></i>
+            </div>
+            <!--下拉菜单-->
+            <div class='popsort popbox'>
+                <ul>
+                    <li class='on'><a href="javascript:;">京东</a></li>
+                    <li><a href="javascript:;">一号店</a></li>
+                    <li><a href="javascript:;">天猫超市</a></li>
+                </ul>
+            </div>
+            <div class='popprice popbox'>
+                <ul>
+                    <li class='on'><a href=javascrip:;">华北（北京、山西等）</a></li>
+                    <li><a href="javascript:;">华东（山东、浙江等）</a></li>
+                    <li><a href="javascript:;">华南（广东、广西等）</a></li>
+                    <li><a href="javascript:;">华中（湖北、河南等）</a></li>
+                    <li><a href="javascript:;">西南（四川，云南等）</a></li>
+                    <li><a href="javascript:;">东北（辽宁、吉林等）</a></li>
+                    <li><a href="javascript:;">西北（宁夏、新疆等）</a></li>
+                </ul>
+            </div>
+            <div class='popcat popbox'>
+                <ul>
+                    <li class='on'><a href="javascript:;">全部价格</a></li>
+                    <li><a href="javascript:;">1-3元</a></li>
+                    <li><a href="javascript:;">3-5元</a></li>
+                    <li><a href="javascript:;">5-10元</a></li>
+                    <li><a href="javascript:;">10-15元</a></li>
+                    <li><a href="javascript:;">15元以上</a></li>
+                </ul>
+            </div>
+            <div class='popsearch popbox'>
+                <div class='formsch row clearfix'>
+                    <div class='txt col-xs-10'>
+                        <input type="search" class='border-img' placeholder='搜索你想要的凑单品'/>
+                    </div>
+                    <div class='smt col-xs-2'>
+                        <input type="button" value='搜索'/>
+                    </div>
+                </div>
+                <div class='select ui-border-b'>
+                    <div class='t'>排序</div>
+                    <div class='c'>
+                        <dl>
+                            <dd><a href="#">销量</a></dd>
+                            <dd class='on'><a href="#">价格↑</a></dd>
+                            <dd><a href="#">价格↓</a></dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class='select classify'>
+                    <div class='t'>分类</div>
+                    <div class='c'>
+                        <dl>
+                            <dd class='on'><a href="#">全部</a></dd>
+                            <dd><a href="#">家居</a></dd>
+                            <dd><a href="#">数码</a></dd>
+                            <dd><a href="#">办公</a></dd>
+                            <dd><a href="#">个护</a></dd>
+                            <dd><a href="#">食品</a></dd>
+                            <dd><a href="#">母婴</a></dd>
+                            <dd><a href="#">服饰</a></dd>
+                        </dl>
+                    </div>
+                </div>
+
+            </div>
+            <div></div>
+        </div>
+        <div class='bd'>
+            <ul id='containTpl' class='masonry clearfix'>
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+</body>
+<!--引用jq-->
+<script src="./zyd_cdp/code/lib/jquery/jquery.js"></script>
+<!--引用bootstrap.js-->
+<script src="./zyd_cdp/code/lib/bootstrap/js/bootstrap.min.js"></script>
+
+<!--引用template.js-->
+<script src="./zyd_cdp/code/lib/template/template.js"></script>
+<!--引用自己的js-->
+<script src="./zyd_cdp/code/js/coudanpin.js"></script>
+
+
+<!--使用template模版-->
+<script type="text/template" id="contain">
+    {{each result as value i}}
+
+        <li><a href="#">
+            <div class='pic'><img src="{{value.productImg}}" alt=""/></div>
+            <div class='title'>{{value.productName}}</div>
+            <div class='other'>
+                <div class='price'><em>{{value.productPrice}}</em></div>
+                <div class='btn'>去凑单</div>
+                <div class='clearfix'></div>
+            </div>
+        </a></li>
+
+    {{/each}}
+
+</script>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <link rel="stylesheet" href="ltk_bs/css/base.less"/>
+    <link rel="stylesheet" href="ltk_bs/lib/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet/less" href="ltk_bs/css/shopNav.less"/>
+    <script src="ltk_bs/lib/less/less.min.js"></script>
+</head>
+<body>
+<header id="header">
+    <div class="back">
+        <a href="index.html">
+            <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+        </a>
+    </div>
+    <span>商城导航</span>
+    <div class="download">
+        <a href=""><img src="images/header_app.png" alt=""/></a>
+    </div>
+</header>
+
+<section class="content">
+    <ul class="contain clearfix">
+
+    </ul>
+</section>
+
+<section class="backToIndex">
+    <div><a style="color:black" id="bbb" href="index.html">首页</a>&gt;商城导航</div>
+</section>
+
+<footer class="foott container">
+    <ul class="row">
+        <li class="col-lg-4 col-sm-4 col-md-4 col-xs-4"><a href="">登录</a></li>
+        <li class="col-lg-4 col-sm-4 col-md-4 col-xs-4"><a href="">注册</a></li>
+        <li class="col-lg-4 col-sm-4 col-md-4 col-xs-4"><a href=""><span class="glyphicon glyphicon-arrow-up"></span>返回顶部</a></li>
+    </ul>
+    <div class="intro">
+        <span ><a href="javascript:;">手机APP下载</a></span>
+        <span><a href="javascript">慢慢买手机版</a></span>
+        <span><a href="javascript">-掌上比价平台</a></span>
+    </div>
+    <div class="webNet">
+        n.manmanbuy.com
+    </div>
+</footer>
+<img class="appp" src="ltk_bs/images/appp.png" alt=""/>
+<script src="ltk_bs/lib/jquery/jquery.js"></script>
+<script src="ltk_bs/lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="ltk_bs/lib/template/template.js"></script>
+<script src="ltk_bs/js/shopNav.js"></script>
+<script type="text/template" id="tpl">
+    {{each result as value i}}
+    <li><a href="{{value.navHref}}"><img src="{{value.navImg}}" alt=""/>{{value.navTitle}}</a></li>
+    {{/each}}
+</script>
+</body>
+</html>

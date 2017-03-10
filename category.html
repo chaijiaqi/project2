@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0"/>
+    <title>MMB实战</title>
+    <!-- 引用第三方样式 -->
+    <link rel="stylesheet" type="text/css" href="pp_cate/bootstrap/css/bootstrap.min.css">
+    <!-- 引用样式重置文件 less格式-->
+    <link rel="stylesheet/less" type="text/css" href="pp_cate/css/base.less">
+    <!-- 引用自己的样式文件 less格式 -->
+    <link rel="stylesheet/less" type="text/css" href="pp_cate/css/index.less">
+    <!-- 引用less.js -->
+    <script src="pp_cate/lib/less/less.min.js"></script>
+    <!-- -->
+    <script src="pp_cate/js/jquery-1.12.2.js"></script>
+    <script src="pp_cate/js/template.js"></script>
+<body>
+<!-- header -->
+<header id="mmb-header" class="">
+    <div id="header1">
+        <div class="logo fl">
+            <a href="index.html">
+                <img src="pp_cate/images/header_logo.png" alt=""/>
+            </a>
+        </div>
+        <div class="appdown fr">
+            <a href="#">
+                <img src="pp_cate/images/header_app.png" alt=""/>
+            </a>
+        </div>
+    </div>
+    <div id="header2" style="display:none;"></div>
+</header>
+<!-- 搜索框 -->
+<section id="mmb-form-search">
+    <form action="">
+        <div id="mmb-searchtxt">
+            <input type="search" name="key" placeholder="请输入你想比价的商品"/>
+        </div>
+        <div id="mmb-searchbtn">
+            <input type="submit" value="搜索"/>
+        </div>
+    </form>
+</section>
+<!--搜索详情-->
+<section class="mmb-contant-chose">
+    <div id="bigtit">
+
+
+    </div>
+
+
+</section>
+<footer id="footer">
+    <div class="row">
+        <div class="col-xs-4">
+            <a href="">登录</a>
+        </div>
+        <div class="col-xs-4">
+            <a href="">注册</a>
+        </div>
+        <div class="col-xs-4">
+            <a href="" style="text-align: center">↑返回顶部</a>
+        </div>
+    </div>
+    <p style="font-size: 12px;text-align: center;"><a href="" style="color: red">手机app下载 </a><a href="">慢慢买手机版 </a> -- 掌上比价平台</p>
+    <p style="text-align: center">m.manmanbuy.com </p>
+</footer>
+<!--模板引擎 -------------------->
+<script id="titleTp1" type="text/html">
+    {{each result as value  i}}
+    <div class="formcnt"  datanum={{value.titleId}} >
+        <a class="pagefather" href="javascript:"><p>
+            {{value.title}}
+        </p><h4><span>◇</span></h4></a>
+    </div>
+    <div class="row item"></div>
+    {{/each}}
+</script>
+
+<script id="titleTp2"  type="text/html">
+    {{each result as value  i}}
+    <div class="col-xs-4">
+        <a class="pageson" href="pp_cate/demo/categorylist.html?categoryid={{value.categoryId}}&pageid=1">{{value.category}}</a>
+    </div>
+    {{/each}}
+</script >
+
+<!-----------------------模板引擎 -------------------->
+
+</body>
+</html>
+<!-- 引用JQ -->
+<!--<script src="./lib/jquery/jquery.js"></script>-->
+<!-- 引用bootstrap.js -->
+<script src="pp_cate/bootstrap/js/bootstrap.min.js"></script>
+<!-- 引用自己的 js -->
+<script src="pp_cate/js/index.js"></script>
